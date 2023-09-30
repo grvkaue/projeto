@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+
+    <img src="{{ aluno.foto.url }}" alt="imagem de {{aluno.nome}}">
+
+    <h3 class="mb-3 nome">{{ aluno.nome }}</h3>
+
+    <div class="infosPessoais">
+        <h3>Informações pessoais</h3>
+        <div class="row">
+            <div class="col-12">
+                <p>Idade: {{aluno.idade}}</p>
+                <p>CPF: {{aluno.cpf}}</p>
+                <p>Email: {{aluno.email}}</p>
+                <p>Contato: {{aluno.contato}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="infosContato">
+        <h3>Informaçoes contato</h3>
+        <div class="row">
+            <div class="col-12">
+                <p>Email: {{aluno.email}}</p>
+                <p>Contato: {{aluno.contato}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="InfosEndereco p3">
+        <h3>Informaçoes Endereço</h3>
+        <div class="row">
+            <div class="col-12">
+                <p>Endereço: {{aluno.enereco}}</p>
+                <p>Cep: {{aluno.cep}}</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="{% url 'index' %}" class="btn-btn-primary btn-sm">Voltar</a>
+
+</div>
+
+
+
+{% endblock %}
